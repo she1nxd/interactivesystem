@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classroom Availability</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Interactive School System</p>
+        <h1>Classroom availability</h1>
+      </div>
+      <div class="clock" aria-live="polite">
+        <span id="current-date"></span>
+        <strong id="current-time"></strong>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="toolbar" aria-label="Map controls">
+        <div class="floor-tabs" id="floor-tabs" role="tablist" aria-label="Select floor"></div>
+        <label class="search">
+          <span>Search room</span>
+          <input id="room-search" type="search" placeholder="e.g. 204" autocomplete="off" />
+        </label>
+      </section>
+
+      <section class="legend" aria-label="Room status legend">
+        <span><i class="legend-dot free"></i> Free according to timetable</span>
+        <span><i class="legend-dot occupied"></i> Occupied according to timetable</span>
+        <span><i class="legend-dot unavailable"></i> Unavailable</span>
+      </section>
+
+      <section class="workspace">
+        <div class="map-card">
+          <div class="map-heading">
+            <div>
+              <p class="eyebrow">Floor plan</p>
+              <h2 id="floor-title">Ground floor</h2>
+            </div>
+            <p id="map-summary" class="map-summary"></p>
+          </div>
+          <div id="floor-map" class="floor-map" aria-label="Interactive floor plan"></div>
+        </div>
+
+        <aside id="room-details" class="details-card" aria-live="polite">
+          <div class="empty-state">
+            <span class="empty-icon">?</span>
+            <h2>Select a classroom</h2>
+            <p>Click a room on the map to see its schedule and availability.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
