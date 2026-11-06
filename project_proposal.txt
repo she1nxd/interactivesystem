@@ -1,0 +1,354 @@
+PROJECT PROPOSAL
+
+Project title
+Interactive Classroom Availability System Integrated with Bakaláři Timetable Data
+
+1. Project summary
+
+The aim of this project is to create a website that displays the availability of classrooms in a school building using interactive floor plans. The school has five floors, and users will be able to select a floor and see which classrooms are currently occupied or free.
+
+The system will use timetable data from Bakaláři, either through an approved data export or another officially permitted method. The website will process this data and calculate the scheduled status of each classroom according to the current date and time.
+
+Each classroom will be displayed on the floor plan using a color indicator:
+
+- Green - free according to the timetable
+- Red - occupied according to the timetable
+- Yellow - reserved or becoming available soon
+- Gray - unavailable or without timetable data
+
+When the user hovers over or clicks on a classroom, additional information will be displayed, including the current lesson, class, teacher, lesson times, next lesson, and the time when the room becomes free.
+
+2. Motivation
+
+Finding available classrooms in a school can be difficult, especially when the building has multiple floors. Timetable information may already exist in Bakaláři, but it is not necessarily presented in a simple visual overview of the entire school.
+
+This project will combine timetable data with an interactive map to create a clearer and more practical way to view classroom availability.
+
+The project is relevant to information technology because it involves:
+
+- Web development
+- Database design
+- Data processing and importing
+- Time-based logic
+- Interactive graphics
+- User interface design
+- System testing and documentation
+
+3. Main objective
+
+The main objective is to develop a functional web application that:
+
+1. Displays interactive maps of all five school floors.
+2. Shows classroom availability based on timetable data.
+3. Displays detailed information about each classroom.
+4. Imports or processes timetable data from Bakaláři.
+5. Provides a clear and easy-to-use interface for students, teachers, and school staff.
+
+The system will show whether a room is scheduled to be occupied, not whether people are physically present in the room.
+
+4. Basic functionality
+
+Floor map:
+
+- Five selectable floors
+- A visual floor plan for each floor
+- Clearly marked classrooms
+- Different colors for different room statuses
+- Room selection by hovering or clicking
+
+Classroom information:
+
+- Room number
+- Floor
+- Capacity
+- Equipment, such as computers or a projector
+- Current lesson
+- Class using the room
+- Teacher
+- Lesson start and end time
+- Next scheduled lesson
+- Time when the room will become free
+
+Timetable processing:
+
+- Read timetable data
+- Match lessons with classrooms
+- Compare lessons with the current date and time
+- Determine whether a classroom is free or occupied
+- Display the room's schedule for the current day
+
+Search and filtering:
+
+- Room number
+- Currently free rooms
+- Currently occupied rooms
+- Room capacity
+- Available equipment
+- Selected floor
+
+5. Bakaláři integration
+
+The project will use timetable data from Bakaláři only through a method approved by the school.
+
+Possible data sources include:
+
+- CSV export
+- XML or JSON export
+- iCalendar export
+- An official API
+- Another school-approved integration method
+
+If direct integration is not available, the system will support importing an exported file. This allows timetable data to be processed and displayed without depending on an unofficial or insecure login method.
+
+During development, fictional or anonymized data will be used where necessary.
+
+6. Proposed technologies
+
+The exact technologies may be adjusted during development, but the planned stack is:
+
+- Frontend: HTML, CSS, JavaScript
+- Interactive maps: SVG floor plans
+- Backend: Node.js with Express, or Python with Flask/FastAPI
+- Database: SQLite
+- Data format: CSV, JSON, XML, or iCalendar
+- Version control: Git
+- Development environment: Visual Studio Code
+
+An SVG-based map will be used because individual rooms can be assigned identifiers and colored dynamically by the website.
+
+For example, a classroom on the map could have the identifier:
+
+room-204
+
+The application could then change its color according to the timetable status.
+
+7. Proposed database structure
+
+The database may contain the following tables:
+
+Floors:
+
+- Floor ID
+- Floor name or number
+- Map file
+
+Rooms:
+
+- Room ID
+- Room number
+- Floor
+- Capacity
+- Equipment
+- Map position or SVG identifier
+
+Lessons:
+
+- Lesson ID
+- Date
+- Start time
+- End time
+- Subject
+- Class
+- Teacher
+- Room
+
+Imports:
+
+- Import ID
+- Source file
+- Import date
+- Number of imported records
+- Import errors
+
+User accounts and bookings may be added as an extension if there is enough time.
+
+8. Project scope
+
+Required features:
+
+- Interactive floor maps
+- All five floors
+- Classroom status indicators
+- Timetable data processing
+- Current and next lesson information
+- Room schedule display
+- Search for classrooms
+- Responsive layout
+- Basic testing and documentation
+
+Optional extensions:
+
+- User accounts
+- Administrator panel
+- Manual timetable import
+- Room booking system
+- Booking conflict prevention
+- Room availability statistics
+- Weekly timetable view
+- Mobile-friendly interface
+- Accessibility improvements
+- Automatic data synchronization
+- Exporting classroom schedules
+
+The optional features will not be implemented until the basic system is complete.
+
+9. Work plan
+
+Month 1 - Research and requirements
+
+- Discuss the project with the teacher
+- Investigate Bakaláři data access
+- Define users and required features
+- Obtain or create sample timetable data
+- Research existing classroom booking systems
+- Define the final project scope
+
+Expected result: Approved specification and sample data.
+
+Month 2 - System and map design
+
+- Design the database
+- Decide on the application architecture
+- Obtain or create the five floor plans
+- Convert the plans into usable SVG files
+- Identify each classroom on the maps
+- Create the initial website layout
+
+Expected result: Designed database and clickable map prototype.
+
+Month 3 - Basic web application
+
+- Create the frontend
+- Add floor selection
+- Add classroom selection
+- Display sample classroom information
+- Implement basic green and red status indicators
+
+Expected result: Working prototype of the main user interface.
+
+Month 4 - Timetable and database
+
+- Create the database
+- Add rooms and timetable records
+- Implement date and time calculations
+- Determine whether rooms are currently free or occupied
+- Display current and next lessons
+
+Expected result: Website with timetable-based classroom statuses.
+
+Month 5 - Bakaláři data import
+
+- Test the approved Bakaláři data source
+- Create an import process
+- Validate imported data
+- Handle missing or invalid records
+- Add import status and error reporting
+
+Expected result: The application can use real or anonymized timetable data.
+
+Month 6 - Complete map and user features
+
+- Add all five floors
+- Add room search and filters
+- Add room capacity and equipment information
+- Improve the information panel
+- Make the website responsive
+
+Expected result: Complete core application.
+
+Month 7 - Testing and improvements
+
+- Test different dates and times
+- Test free, occupied, and unavailable rooms
+- Test incorrect or incomplete timetable data
+- Test different screen sizes
+- Improve accessibility and usability
+- Fix errors and optimize the application
+
+Expected result: Tested and stable system.
+
+Month 8 - Documentation and presentation
+
+- Document the system architecture
+- Document the database and data import
+- Describe testing procedures and results
+- Prepare screenshots and diagrams
+- Prepare a live demonstration
+- Evaluate possible future improvements
+
+Expected result: Final application, documentation, and presentation.
+
+10. Testing plan
+
+The application will be tested using:
+
+- Timetable records for different times of day
+- Empty rooms
+- Rooms with one or more scheduled lessons
+- Lessons that are currently in progress
+- Lessons that have already ended
+- Rooms with missing timetable data
+- Invalid or incomplete import files
+- Multiple users viewing the website
+- Desktop, tablet, and mobile screen sizes
+
+The results will be compared with the original timetable data to verify that classroom statuses and lesson information are calculated correctly.
+
+11. Risks and solutions
+
+Risk: Bakaláři does not provide a suitable data source.
+Solution: Use an approved CSV, XML, JSON, or iCalendar export.
+
+Risk: Real timetable data contains personal information.
+Solution: Use only approved information and anonymize data during development.
+
+Risk: Floor plans are not available digitally.
+Solution: Create simplified plans specifically for the application.
+
+Risk: Timetable data contains errors.
+Solution: Validate imports and show clear error messages.
+
+Risk: The project becomes too large.
+Solution: Complete the required features before optional extensions.
+
+Risk: Users assume the system detects physical presence.
+Solution: Clearly label the status as "according to timetable".
+
+Risk: Direct integration is unreliable.
+Solution: Store a local copy of imported timetable data.
+
+12. Expected result
+
+At the end of the project, there will be a functional website that provides a visual overview of classroom availability across all five floors of the school.
+
+The finished system will allow users to:
+
+- Select a floor
+- View classroom availability on a map
+- Search for a classroom
+- See current and upcoming lessons
+- View classroom details
+- Use timetable data imported from Bakaláři
+
+The project will also include technical documentation, testing results, and a presentation demonstrating the main functions.
+
+13. Possible final presentation demonstration
+
+The final demonstration could show the following sequence:
+
+1. Open the website.
+2. Select one of the five floors.
+3. Show classrooms marked as free and occupied.
+4. Hover over or click an occupied classroom.
+5. Display the current lesson and teacher.
+6. Show when the room becomes free.
+7. Select a free classroom and display its next lesson.
+8. Search for a room with a projector or a specific capacity.
+9. Import updated timetable data.
+10. Show how the map changes after the import.
+
+14. Conclusion
+
+This project will create a practical website that combines school timetable data with interactive floor maps. It is achievable within seven to eight months and provides opportunities to demonstrate frontend development, backend programming, database management, data processing, user interface design, and software testing.
+
+The project will begin with a small prototype using sample data and will later be expanded to all five floors and approved Bakaláři timetable data. This approach reduces risk while leaving room for additional features if the core system is completed early.
