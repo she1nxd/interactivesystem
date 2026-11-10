@@ -1,0 +1,50 @@
+SWOT analýza projektu
+
+Interaktivní Systém Dostupnosti Tříd
+
+Silné stránky
+
+• Praktické řešení skutečného problému studentů a zaměstnanců školy.
+• Zobrazení dostupnosti učeben v reálném čase.
+• Přehledná interaktivní mapa celé školní budovy.
+• Barevné rozlišení volných a obsazených místností.
+• Možnost vyhledávání a filtrování učeben.
+• Zobrazení důležitých informací – kapacita, vybavení, aktuální a následující hodina.
+• Automatické načítání dat z Bakalářů.
+• Projekt rozvíjí znalosti frontendu, backendu, databází, API, UI a testování.
+• Možnost postupného rozšiřování od prototypu až po řešení pro celou školu.
+
+Slabé stránky
+
+• Závislost na dostupnosti a správnosti dat ze systému Bakaláři.
+• Nutnost vyřešit technický způsob importu dat, například CSV, JSON, XML nebo API.
+• Možná časová náročnost při tvorbě mapy pěti pater.
+• Riziko nepřesných nebo neaktuálních údajů v rozvrhu.
+• Projekt může být závislý na školním IT systému a jeho administrátorech.
+• Rezervace místností by vyžadovaly složitější kontrolu kolizí a oprávnění.
+
+Příležitosti
+
+• Možnost nasazení i na dalších školách.
+• Rozšíření projektu o uživatelské účty a rozdílná oprávnění.
+• Online rezervace učeben.
+• Vytvoření mobilní aplikace nebo responzivní verze pro telefony.
+• Přidání upozornění na změny rozvrhu nebo uvolnění místnosti.
+• Napojení na další školní systémy.
+• Využití systému při suplování, projektové výuce nebo školních akcích.
+• Vytvoření statistik využití učeben.
+• Zlepšení orientace návštěvníků ve školní budově.
+
+Hrozby
+
+• Výpadek školní sítě, serveru nebo externího rozhraní.
+• Neaktuální nebo chybně zadané údaje v rozvrhu.
+• Nízké přijetí ze strany studentů nebo učitelů.
+• Potřeba pravidelné údržby a aktualizace systému.
+• Omezení způsobená licenčními nebo organizačními podmínkami školy.
+
+Závěr
+
+Projekt má vysoký praktický přínos, protože řeší problém rychlého zjištění dostupnosti učeben. Jeho hlavní předností je propojení školního rozvrhu s interaktivní mapou budovy. Největší rizika představuje závislost na datech ze systému Bakaláři, správnost importovaných údajů a bezpečnost aplikace.
+
+Doporučeným postupem je začít jednoduchým prototypem se vzorovými daty, následně ověřit možnosti integrace s Bakaláři a teprve poté systém rozšířit o uživatelské účty, rezervace a mobilní aplikaci.
